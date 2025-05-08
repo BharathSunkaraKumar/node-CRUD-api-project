@@ -1,13 +1,14 @@
 module.exports = (req, res) => {
 
     const baseUrl = req.url.substring(0, req.url.lastIndexOf('/') + 1);
-    console.log('baseUrl::'+baseUrl)
+    // console.log('baseUrl::'+baseUrl)
     const id = req.url.split('/')[3];
-    console.log('id::'+id)
+    console.log('hello get')
+    // console.log('id::'+id)
     const regexV4 = new RegExp(
         /^[0-9A-F]{8}-[0-9A-F]{4}-4[0-9A-F]{3}-[89AB][0-9A-F]{3}-[0-9A-F]{12}$/i
     );
-    console.log('regexv4::'+regexV4.test(id))
+    //console.log('regexv4::'+regexV4.test(id))
 
     if(req.url === '/api/movies') {
         res.statusCode = 200;

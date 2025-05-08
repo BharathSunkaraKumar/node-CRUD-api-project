@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
         case "PUT":
             putReq(req, res);
             break;
-        case "DELETe":
+        case "DELETE":
             deleteReq(req, res);
             break;
         default:
